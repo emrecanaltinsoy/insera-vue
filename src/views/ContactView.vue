@@ -1,0 +1,6 @@
+<template>
+  <h1>Contact page</h1>
+  <p>This is the contact page content.</p>
+</template>
+<script setup lang="ts"></script>
+<style scoped></style>
