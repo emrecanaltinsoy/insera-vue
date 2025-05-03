@@ -1,11 +1,77 @@
 <template>
-  <h1>Products page</h1>
-  <p>This is the products page content.</p>
-  <button @click="handleClick">Click me</button>
+  <div class="flex flex-col items-center">
+    <div class="relative w-full">
+      <img
+        src="@/assets/images/products/productsMain.jpg"
+        alt="homeImage"
+        class="w-full mx-auto h-[calc(50vh)] object-cover pb-10"
+      />
+      <h2
+        class="absolute text-5xl font-extrabold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        Our Products
+      </h2>
+    </div>
+
+    <h1 class="text-4xl p-5">Our Products</h1>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[90%] pb-10"
+    >
+      <PCard v-for="project in projects" :key="project.title" class="p-5">
+        <template #header>
+          <div class="text-[2.5rem] text-center mb-4;">{{ project.header }}</div>
+        </template>
+        <template #title>{{ project.title }}</template>
+        <template #content>
+          <p>{{ project.description }}</p>
+          <p>Additional content goes here.</p>
+        </template>
+      </PCard>
+    </div>
+  </div>
 </template>
 <script setup lang="ts">
-const handleClick = () => {
-  alert('Button clicked!')
-}
+const projects = [
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+  {
+    header: 'HEADER',
+    title: 'TITLE',
+    description: 'DESC',
+  },
+]
 </script>
 <style scoped></style>
