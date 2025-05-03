@@ -1,10 +1,18 @@
 <template>
   <div class="flex flex-col items-center">
-    <img
-      src="@/assets/images/projects/projectsMain.webp"
-      alt="homeImage"
-      class="w-full mx-auto h-[calc(50vh)] object-cover pb-10"
-    />
+    <div class="relative w-full">
+      <img
+        src="@/assets/images/projects/projectsMain.webp"
+        alt="homeImage"
+        class="w-full mx-auto h-[calc(50vh)] object-cover pb-10"
+      />
+      <h2
+        class="absolute text-5xl font-extrabold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        Our Projects
+      </h2>
+    </div>
+
     <h1 class="text-4xl p-5">Our Projects</h1>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[90%] pb-10"
