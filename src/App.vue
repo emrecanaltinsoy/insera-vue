@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import AppHeaderPrime from '@/components/AppHeaderPrime.vue'
+import AppHeader from '@/components/AppHeader.vue'
+import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { watch } from 'vue'
 
 import { useDark, useToggle } from '@vueuse/core'
@@ -8,19 +9,33 @@ import { useDark, useToggle } from '@vueuse/core'
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
-import { ref } from 'vue'
-import { computed, onMounted, onBeforeUnmount } from 'vue'
+// import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
-import { useScroll, useMouse } from '@vueuse/core'
+// import { useMouse, useScroll } from '@vueuse/core'
+// import { useTemplateRef } from 'vue'
 
-const arrivedTopState = ref(true)
+// const arrivedTopState = ref(true)
+// const el = useTemplateRef<HTMLElement>('el')
 
-const { x, y } = useMouse()
-const { y: scrollY } = useScroll(document)
+// const { x, y } = useMouse()
 
-const menuBarClass = computed(() => {
-  return scrollY.value === 0 ? 'w-full bg-transparent! border-0! z-10' : 'w-full z-10' //
-})
+// const menuBarClass = computed(() => {
+//   return arrivedTopState.value ? 'w-full bg-transparent! border-0! z-10' : 'w-full z-10' //
+// })
+
+// const handleScroll = () => {
+//   const { y: scrollY } = useScroll(el)
+//   arrivedTopState.value = scrollY.value === 0
+//   console.log('HOMMER', scrollY.value, arrivedTopState.value)
+// }
+
+// onMounted(() => {
+//   window.addEventListener('scroll', handleScroll)
+// })
+
+// onBeforeUnmount(() => {
+//   window.removeEventListener('scroll', handleScroll)
+// })
 
 // Watch for theme changes
 watch(
@@ -36,16 +51,17 @@ watch(
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen w-full">
+  <div ref="el" class="flex flex-col min-h-screen w-full">
     <header
-      class="fixed top-0 left-0 flex justify-between items-center z-10 w-full transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
+      class="flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
     >
       <div>
         <h1 class="text-2xl text-[color:var(--primary-color)] m-0">Insera</h1>
       </div>
-      <AppHeaderPrime />
 
-      <h3>Mouse: {{ x }} x {{ y }}, {{ scrollY }}</h3>
+      <div>
+        <AppHeader />
+      </div>
 
       <div class="flex justify-content-end align-items-center md:flex-row md:gap-2">
         <PButton @click="toggleDark()" class="p-button-rounded">
@@ -59,6 +75,8 @@ watch(
         <RouterView />
       </Suspense>
     </main>
+
+    <WhatsAppButton />
   </div>
 </template>
 

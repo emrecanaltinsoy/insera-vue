@@ -1,8 +1,10 @@
 <template>
-  <PMenubar class="w-full bg-transparent! border-0! z-10" :model="items" />
+  <div>
+    <PMenubar class="w-full bg-transparent! border-0! z-10" :model="items" />
+  </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { computed, onMounted, onBeforeUnmount } from 'vue'
