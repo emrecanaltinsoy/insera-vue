@@ -53,7 +53,7 @@ watch(
 <template>
   <div ref="el" class="flex flex-col min-h-screen w-full">
     <header
-      class="flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
+      class="sticky top-0 bg-[color:var(--card-background)] flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
     >
       <div>
         <h1 class="text-2xl text-[color:var(--primary-color)] m-0">Insera</h1>
