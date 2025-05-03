@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/AppHeader.vue'
+import AppFooter from '@/components/AppFooter.vue'
 import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { watch } from 'vue'
 
 import { useDark, useToggle } from '@vueuse/core'
+import router from './router'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
@@ -77,6 +79,12 @@ watch(
     </main>
 
     <WhatsAppButton />
+
+    <footer
+      class="bottom-0 text-center text-[color:var(--light-text)] w-full transition-[background-color] duration-[0.3s] ease-[ease] p-4"
+    >
+      <AppFooter />
+    </footer>
   </div>
 </template>
 
