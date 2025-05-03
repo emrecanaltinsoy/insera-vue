@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center min-h-screen">
+  <div class="flex flex-col items-center">
     <img
       src="@/assets/images/home/homeImage.jpg"
       alt="homeImage"
