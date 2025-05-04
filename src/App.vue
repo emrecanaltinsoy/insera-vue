@@ -53,7 +53,7 @@ watch(
 </script>
 
 <template>
-  <div ref="el" class="flex flex-col min-h-screen w-full">
+  <div ref="el" class="flex flex-col min-h-screen w-full justify-between">
     <header
       class="sticky z-10 top-0 bg-[color:var(--card-background)] flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
     >
@@ -72,7 +72,7 @@ watch(
       </div>
     </header>
 
-    <main>
+    <main class="mb-auto">
       <Suspense>
         <RouterView />
       </Suspense>
