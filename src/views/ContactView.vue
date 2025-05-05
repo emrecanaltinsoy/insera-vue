@@ -13,9 +13,9 @@
       </h2>
     </div>
 
-    <h1 class="text-4xl p-5">Contact us</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
-      <div class="flex flex-col max-w-[90%] pb-10 gap-4">
+    <!-- <h1 class="text-4xl p-5">Contact us</h1> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto max-w-[90%]">
+      <div class="flex flex-col pb-10 gap-4">
         <p class="text-[color:var(--light-text)]">
           If you have any questions or inquiries, please feel free to reach out to us.
         </p>
@@ -42,7 +42,7 @@
           >Submit</PButton
         >
       </div>
-      <div class="flex flex-col max-w-[90%] pb-10 gap-4">
+      <div class="flex flex-col pb-10 gap-4">
         <PCard class="w-full">
           <template #header>
             <div class="text-[2.5rem] text-center mb-4;">Email</div>

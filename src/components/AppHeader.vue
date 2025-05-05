@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<style scoped>
+.p-menubar-mobile {
+  position: unset;
+}
+</style>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
