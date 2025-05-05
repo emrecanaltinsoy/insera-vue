@@ -6,7 +6,6 @@ import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { watch } from 'vue'
 
 import { useDark, useToggle } from '@vueuse/core'
-import router from './router'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)

@@ -13,34 +13,34 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { computed, onMounted, onBeforeUnmount } from 'vue'
+// import { computed, onMounted, onBeforeUnmount } from 'vue'
 
-import { useScroll } from '@vueuse/core'
+// import { useScroll } from '@vueuse/core'
 
-const arrivedTopState = ref(true)
+// const arrivedTopState = ref(true)
 
-const menuBarClass = computed(() => {
-  return arrivedTopState.value ? 'w-full bg-transparent! border-0! z-10' : 'w-full z-10' //
-})
+// const menuBarClass = computed(() => {
+//   return arrivedTopState.value ? 'w-full bg-transparent! border-0! z-10' : 'w-full z-10' //
+// })
 
-const handleScroll = () => {
-  const { y: scrollY } = useScroll(document)
-  arrivedTopState.value = scrollY.value === 0
-  console.log('scrollY.value', scrollY.value)
-  console.log('arrivedTopState.value', arrivedTopState.value)
-}
+// const handleScroll = () => {
+//   const { y: scrollY } = useScroll(document)
+//   arrivedTopState.value = scrollY.value === 0
+//   console.log('scrollY.value', scrollY.value)
+//   console.log('arrivedTopState.value', arrivedTopState.value)
+// }
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+// onMounted(() => {
+//   window.addEventListener('scroll', handleScroll)
+// })
 
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+// onBeforeUnmount(() => {
+//   window.removeEventListener('scroll', handleScroll)
+// })
 
 const router = useRouter()
 
-const selectedLanguage = ref('EN')
+// const selectedLanguage = ref('EN')
 
 const items = ref([
   {
