@@ -37,6 +37,7 @@ import FloatLabel from 'primevue/floatlabel'
 import ButtonGroup from 'primevue/buttongroup'
 import Skeleton from 'primevue/skeleton'
 import InputIcon from 'primevue/inputicon'
+import PanelMenu from 'primevue/panelmenu'
 
 // Services
 import Toast from 'primevue/toast'
@@ -87,6 +88,7 @@ app.component('PProgressSpinner', ProgressSpinner)
 app.component('PFloatLabel', FloatLabel)
 app.component('PButtonGroup', ButtonGroup)
 app.component('PSkeleton', Skeleton)
+app.component('PPanelMenu', PanelMenu)
 
 // Register the directives
 app.directive('tooltip', Tooltip)

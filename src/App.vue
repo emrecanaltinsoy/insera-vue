@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
+import Icon from '@/components/Icon.vue'
 import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { watch } from 'vue'
 
@@ -53,34 +54,33 @@ watch(
 
 <template>
   <div ref="el" class="flex flex-col min-h-screen w-full justify-between">
-    <header
-      class="sticky z-10 top-0 bg-[color:var(--card-background)] flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
-    >
-      <div>
-        <h1 class="text-2xl text-[color:var(--primary-color)] m-0">Insera</h1>
-      </div>
+    <div>
+      <header
+        class="sticky z-10 top-0 bg-[color:var(--card-background)] flex flex-row justify-between items-center w-full h-[70px] transition-[background-color] duration-[0.3s] ease-[ease] px-8 py-4"
+      >
+        <Icon />
 
-      <div>
-        <AppHeader />
-      </div>
+        <div>
+          <AppHeader />
+        </div>
 
-      <div class="flex justify-content-end align-items-center md:flex-row md:gap-2">
-        <PButton @click="toggleDark()" class="p-button-rounded">
-          <i :class="['pi', isDark ? 'pi-moon' : 'pi-sun']"></i>
-        </PButton>
-      </div>
-    </header>
+        <div class="flex justify-content-end align-items-center md:flex-row md:gap-2">
+          <PButton @click="toggleDark()" class="p-button-rounded">
+            <i :class="['pi', isDark ? 'pi-moon' : 'pi-sun']"></i>
+          </PButton>
+        </div>
+      </header>
 
-    <main class="mb-auto">
-      <Suspense>
-        <RouterView />
-      </Suspense>
-    </main>
-
-    <WhatsAppButton />
+      <main class="mb-auto">
+        <Suspense>
+          <RouterView />
+        </Suspense>
+      </main>
+      <WhatsAppButton />
+    </div>
 
     <footer
-      class="bottom-0 text-center text-[color:var(--light-text)] w-full transition-[background-color] duration-[0.3s] ease-[ease] p-4"
+      class="text-center text-[color:var(--light-text)] w-full transition-[background-color] duration-[0.3s] ease-[ease] p-4 bottom-0"
     >
       <AppFooter />
     </footer>

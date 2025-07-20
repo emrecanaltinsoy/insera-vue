@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col md:flex-row justify-center items-center gap-8">
     <div class="flex flex-col">
-      <h2 class="text-[color:var(--primary-color)] text-lg">Insera</h2>
+      <Icon />
       <p class="text-[color:var(--light-text)]">
         Insera, yenilikçi çözümler sunan bir teknoloji şirketidir.
       </p>
@@ -30,6 +30,8 @@
 </template>
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import Icon from '@/components/Icon.vue'
+
 const router = useRouter()
 </script>
 

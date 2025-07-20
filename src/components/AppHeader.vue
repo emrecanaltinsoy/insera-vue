@@ -44,35 +44,38 @@ const router = useRouter()
 
 const items = ref([
   {
-    label: 'Home',
-    icon: 'pi pi-home',
-    command: () => router.push('/'),
-  },
-  {
-    label: 'Products',
+    label: 'Kurumsal',
     items: [
       {
-        label: 'All Products',
-        command: () => router.push('/products'),
-        icon: 'pi pi-box',
+        label: 'Hakkımızda',
+        command: () => router.push('/hakkimizda'),
       },
       {
-        label: 'Batteries',
-        command: () => router.push('/products/batteries'),
-        icon: 'pi pi-bolt',
+        label: 'Sıkça Sorulan Sorular',
+        command: () => router.push('/sikca-sorulan-sorular'),
       },
     ],
-    icon: 'pi pi-box',
   },
   {
-    label: 'Projects',
-    command: () => router.push('/projects'),
-    icon: 'pi pi-search',
+    label: 'Ürünler',
+    items: [
+      {
+        label: 'Tüm Ürünler',
+        command: () => router.push('/urunler'),
+      },
+      // {
+      //   label: 'Bataryalar',
+      //   command: () => router.push('/urunler/bataryalar'),
+      // },
+    ],
   },
   {
-    label: 'Contact',
-    icon: 'pi pi-users',
-    command: () => router.push('/contact'),
+    label: 'Projeler',
+    command: () => router.push('/projeler'),
+  },
+  {
+    label: 'İletişim',
+    command: () => router.push('/iletisim'),
   },
 ])
 </script>
