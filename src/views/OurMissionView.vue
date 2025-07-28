@@ -48,7 +48,14 @@ const items = [
     command: () => router.push('/hakkimizda'),
   },
   { label: 'Vizyonumuz', command: () => router.push('/vizyonumuz') },
-  { label: 'Misyonumuz', command: () => router.push('/misyonumuz'), disabled: true },
+  {
+    label: 'Misyonumuz',
+    command: () => router.push('/misyonumuz'),
+    style: {
+      'background-color': 'var(--p-panelmenu-item-focus-background)',
+    },
+    disabled: true, // Disable the current item to indicate it's selected
+  },
   { label: 'Hizmetlerimiz', command: () => router.push('/hizmetlerimiz') },
 ]
 </script>

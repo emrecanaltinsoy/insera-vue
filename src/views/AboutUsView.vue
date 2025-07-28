@@ -51,7 +51,10 @@ const items = [
   {
     label: 'Hakkımızda',
     command: () => router.push('/hakkimizda'),
-    disabled: true,
+    style: {
+      'background-color': 'var(--p-panelmenu-item-focus-background)',
+    },
+    disabled: true, // Disable the current item to indicate it's selected
   },
   { label: 'Vizyonumuz', command: () => router.push('/vizyonumuz') },
   { label: 'Misyonumuz', command: () => router.push('/misyonumuz') },
